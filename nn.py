@@ -41,6 +41,10 @@ class NN(object):
 			self.load_weight(model_path)
 
 	def load_weight(self,path):
+		'''
+		Loads the pretrained model
+		path = Path of the model
+		'''
 		if path is None:
 			raise Exception('Model Load Path Invalid')
 		try:	
@@ -60,6 +64,11 @@ class NN(object):
 
 
 	def init_weights(self,n_hidden,dims):
+		'''
+		Initializes the weights of the network
+		n_hidden = Number of hidden layers
+		dims = Number of Hidden Dimensions
+		'''
 		self.weights[0]=np.random.randn(self.ip_dim,dims[0]) * (1.0/np.sqrt(self.ip_dim))
 		self.biases[0] = np.zeros((dims[0],))
 
@@ -79,7 +88,9 @@ class NN(object):
 
 
 	def get_data(self):
-		
+		'''
+		Iterate over the training data for batch generation
+		'''
 		if self.counter > self.n_samples:
 			self.counter = 0
 
@@ -88,6 +99,11 @@ class NN(object):
 		return self.mnist_data[self.counter:self.counter+self.batch_size,:]
 
 	def forward(self,ip,labels=None):
+		'''
+		Forward Pass
+		ip = Input image tensor
+		labels = If None, it will not compute loss
+		'''
 		h1 = ip.dot(self.weights[0]) + self.biases[0]
 		h1_bn = self.batchnorm_forward(h1,0,mode=self.mode)
 		h1_relu = self.relu(h1_bn.copy())
@@ -106,14 +122,23 @@ class NN(object):
 		return (h1,h1_bn,h1_relu,h2,h2_bn,h2_relu,logits,probs,loss)
 
 	def loss(self,y,pred):
+		'''
+		Cross Entropy  Loss
+		'''
 		return -np.sum(y*np.log(pred))/(y.shape[0]+self.eps)
 
 	def softmax(self,ip):
+		'''
+		Computes Softmax of the Logits
+		'''
 		centered_ip = ip - np.max(ip,axis=1).reshape(-1,1)
 		probs = np.exp(centered_ip)
 		return probs/np.sum(probs,axis=1).reshape(-1,1).astype(np.float32)
 
 	def relu(self,ip):
+		'''
+		RelU Activation
+		'''
 		x = ip
 		x[np.where(x < 0)] = 0
 		return x
@@ -174,6 +199,9 @@ class NN(object):
 
 
 	def backward(self,cache,ip,labels):
+		'''
+		Backward Pass
+		'''
 		h1,h1_bn,h1_relu, h2,h2_bn,h2_relu, logits, probs,__ = cache
 		dy = (labels - probs)
 		dW2 = h2_relu.T.dot(dy)
@@ -196,6 +224,9 @@ class NN(object):
 		return (dW0,db0,dW1,db1,dW2,db2,dbeta2,dgamma2,dbeta1,dgamma1)
 
 	def update(self,grads):
+		'''
+		Weight Update
+		'''
 		
 		dW0,db0,dW1,db1,dW2,db2,dbeta2,dgamma2,dbeta1,dgamma1 = grads
 
@@ -216,6 +247,9 @@ class NN(object):
 
 
 	def accuracy(self,preds,labels):
+		'''
+		Compute Accuracy
+		'''
 		p_idx = np.argmax(preds,axis=1)
 		l_idx = np.argmax(labels,axis=1)
 
@@ -224,6 +258,9 @@ class NN(object):
 
 
 	def train(self):
+		'''
+		Start Training the network
+		'''
 		it_per_epoch = self.n_samples/self.batch_size + 1
 		it_num = 0
 		print "Starting Training.............."
@@ -279,6 +316,9 @@ class NN(object):
 			
 
 	def save_model(self):
+		'''
+		Save the trained mode at given model path
+		'''
 		if not os.path.exists(self.save_model_path):
 			os.makedirs(self.save_model_path)
 		else:
