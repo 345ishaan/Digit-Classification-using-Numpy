@@ -15,7 +15,9 @@ These instructions will showcase how to access the data, train and test the mode
   i) datapath = path to the data folder inside which the MNIST CSVs files are stored. <br />
   ii) mode = 'train' or 'test' to extract the training or test data<br />
   iii) For example :-<br />
-       python dataloader.py ./data test<br />
+      ```python
+       python dataloader.py ./data test
+       ```
  
 ## Training the model
 1) Python Script , nn.py contains all the APIs used for training the model, saving the model and running over the test data
@@ -25,21 +27,25 @@ These instructions will showcase how to access the data, train and test the mode
     iii) modelpath = path to store the trained weight or load the weights during the test time <br />
     
     iv) Example:-
+    
+        ```python
         python nn.py train ./data ./model_bn
-
+        ```
 ## Testing the model
 1) I have already provided the trained model inside the model folder and the test data inside the data folder.
 2) To get started, use the follwing command.
-
-    python nn.py test ./data ./model_bn
     
+    ```python
+    python nn.py test ./data ./model_bn
+    ```
 ## Run on sample images
 1) I have kept some images from MNIST inside the images folder.
 2) To use this code, install opencv to read the image.
 3) Run using :-
-
+  
+  ```python
   python run_on_image.py images/img_4.png ./model_bn/
-    
+  ```  
 ## Model Desgin
 1) Number of Hidden Layers - 2
 2) Hidden Layer Sizes - (1024,2048)
