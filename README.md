@@ -29,7 +29,7 @@ These instructions will showcase how to access the data, train and test the mode
     iv) Example:-
     
         ```python
-            python nn.py train ./data ./model_bn
+            python nn.py train ./data ./new_model
         ```
         
     v) Caution:-
