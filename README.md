@@ -38,6 +38,90 @@ These instructions will showcase how to access the data, train and test the mode
     ```python
         python nn.py test ./data ./model_bn
     ```
+
+  If everything is set-up well, you should see the following results on your console.<br />
+                        Loading Dataset===><br />
+                        Done!<br />
+                        Loading Trained Weights......<br />
+                        Testing Iteration===>0, Acc ====>0.9766<br />
+                        Testing Iteration===>1, Acc ====>0.9609<br />
+                        Testing Iteration===>2, Acc ====>0.9844<br />
+                        Testing Iteration===>3, Acc ====>0.9766<br />
+                        Testing Iteration===>4, Acc ====>0.9531<br />
+                        Testing Iteration===>5, Acc ====>0.9531<br />
+                        Testing Iteration===>6, Acc ====>0.9453<br />
+                        Testing Iteration===>7, Acc ====>0.9844<br />
+                        Testing Iteration===>8, Acc ====>0.9687<br />
+                        Testing Iteration===>9, Acc ====>0.9609<br />
+                        Testing Iteration===>10, Acc ====>0.9844<br />
+                        Testing Iteration===>11, Acc ====>0.9297<br />
+                        Testing Iteration===>12, Acc ====>0.9531<br />
+                        Testing Iteration===>13, Acc ====>0.9531<br />
+                        Testing Iteration===>14, Acc ====>0.9297<br />
+                        Testing Iteration===>15, Acc ====>0.9453<br />
+                        Testing Iteration===>16, Acc ====>0.9687<br />
+                        Testing Iteration===>17, Acc ====>0.9766<br />
+                        Testing Iteration===>18, Acc ====>0.9531<br />
+                        Testing Iteration===>19, Acc ====>0.9141<br />
+                        Testing Iteration===>20, Acc ====>0.9766<br />
+                        Testing Iteration===>21, Acc ====>0.9922<br />
+                        Testing Iteration===>22, Acc ====>0.9219<br />
+                        Testing Iteration===>23, Acc ====>0.9531<br />
+                        Testing Iteration===>24, Acc ====>0.9922<br />
+                        Testing Iteration===>25, Acc ====>0.9687<br />
+                        Testing Iteration===>26, Acc ====>0.9531<br />
+                        Testing Iteration===>27, Acc ====>0.8984<br />
+                        Testing Iteration===>28, Acc ====>0.9687<br />
+                        Testing Iteration===>29, Acc ====>0.9453<br />
+                        Testing Iteration===>30, Acc ====>0.9453<br />
+                        Testing Iteration===>31, Acc ====>0.9453<br />
+                        Testing Iteration===>32, Acc ====>0.9531<br />
+                        Testing Iteration===>33, Acc ====>0.9687<br />
+                        Testing Iteration===>34, Acc ====>0.9844<br />
+                        Testing Iteration===>35, Acc ====>0.9766<br />
+                        Testing Iteration===>36, Acc ====>0.9766<br />
+                        Testing Iteration===>37, Acc ====>0.9687<br />
+                        Testing Iteration===>38, Acc ====>0.9375<br />
+                        Testing Iteration===>39, Acc ====>0.9687<br />
+                        Testing Iteration===>40, Acc ====>0.9687<br />
+                        Testing Iteration===>41, Acc ====>0.9609<br />
+                        Testing Iteration===>42, Acc ====>0.9844<br />
+                        Testing Iteration===>43, Acc ====>0.9453<br />
+                        Testing Iteration===>44, Acc ====>0.9531<br />
+                        Testing Iteration===>45, Acc ====>0.9687<br />
+                        Testing Iteration===>46, Acc ====>0.9687<br />
+                        Testing Iteration===>47, Acc ====>0.9766<br />
+                        Testing Iteration===>48, Acc ====>0.9609<br />
+                        Testing Iteration===>49, Acc ====>0.9766<br />
+                        Testing Iteration===>50, Acc ====>0.9531<br />
+                        Testing Iteration===>51, Acc ====>0.9922<br />
+                        Testing Iteration===>52, Acc ====>0.9453<br />
+                        Testing Iteration===>53, Acc ====>0.9766<br />
+                        Testing Iteration===>54, Acc ====>0.9531<br />
+                        Testing Iteration===>55, Acc ====>0.9453<br />
+                        Testing Iteration===>56, Acc ====>0.9453<br />
+                        Testing Iteration===>57, Acc ====>0.9453<br />
+                        Testing Iteration===>58, Acc ====>0.9219<br />
+                        Testing Iteration===>59, Acc ====>0.9609<br />
+                        Testing Iteration===>60, Acc ====>0.9531<br />
+                        Testing Iteration===>61, Acc ====>0.9609<br />
+                        Testing Iteration===>62, Acc ====>0.9297<br />
+                        Testing Iteration===>63, Acc ====>0.9687<br />
+                        Testing Iteration===>64, Acc ====>0.9297<br />
+                        Testing Iteration===>65, Acc ====>0.9766<br />
+                        Testing Iteration===>66, Acc ====>0.9687<br />
+                        Testing Iteration===>67, Acc ====>0.9453<br />
+                        Testing Iteration===>68, Acc ====>0.9531<br />
+                        Testing Iteration===>69, Acc ====>0.9219<br />
+                        Testing Iteration===>70, Acc ====>0.9531<br />
+                        Testing Iteration===>71, Acc ====>0.9531<br />
+                        Testing Iteration===>72, Acc ====>0.9531<br />
+                        Testing Iteration===>73, Acc ====>0.9531<br />
+                        Testing Iteration===>74, Acc ====>0.9297<br />
+                        Testing Iteration===>75, Acc ====>0.9531<br />
+                        Testing Iteration===>76, Acc ====>0.9297<br />
+                        Testing Iteration===>77, Acc ====>0.9687<br />
+
 ## Run on sample images
 1) I have kept some images from MNIST inside the images folder.
 2) To use this code, install opencv to read the image.
