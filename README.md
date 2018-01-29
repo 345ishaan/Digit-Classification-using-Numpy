@@ -16,7 +16,7 @@ These instructions will showcase how to access the data, train and test the mode
   ii) mode = 'train' or 'test' to extract the training or test data<br />
   iii) For example :-<br />
       ```python
-       python dataloader.py ./data test
+          python dataloader.py ./data test
        ```
  
 ## Training the model
@@ -29,14 +29,14 @@ These instructions will showcase how to access the data, train and test the mode
     iv) Example:-
     
         ```python
-        python nn.py train ./data ./model_bn
+            python nn.py train ./data ./model_bn
         ```
 ## Testing the model
 1) I have already provided the trained model inside the model folder and the test data inside the data folder.
 2) To get started, use the follwing command.
     
     ```python
-    python nn.py test ./data ./model_bn
+        python nn.py test ./data ./model_bn
     ```
 ## Run on sample images
 1) I have kept some images from MNIST inside the images folder.
@@ -44,7 +44,7 @@ These instructions will showcase how to access the data, train and test the mode
 3) Run using :-
   
   ```python
-  python run_on_image.py images/img_4.png ./model_bn/
+      python run_on_image.py images/img_4.png ./model_bn/
   ```  
 ## Model Desgin
 1) Number of Hidden Layers - 2
