@@ -1,8 +1,6 @@
 import sys
 import os
 import numpy as np
-import matplotlib.pyplot as plt
-
 from dataloader import *
 
 class NN(object):
@@ -33,7 +31,7 @@ class NN(object):
 		self.biases={}
 		self.batch_norm_params={}
 		self.bn_cache={}
-		self.save_iter = 100
+		self.save_iter = 1
 
 		if mode == 'train':
 			print "Initializing Weights......"
@@ -228,9 +226,6 @@ class NN(object):
 	def train(self):
 		it_per_epoch = self.n_samples/self.batch_size + 1
 		it_num = 0
-		acc_cache =[]
-		loss_cache=[]
-		it_cache=[]
 		print "Starting Training.............."
 		
 
@@ -252,9 +247,6 @@ class NN(object):
 				if not it_num%self.save_iter:
 					new_acc = self.accuracy(cache[-2],batch_labels)
 					new_loss = cache[-1]
-					acc_cache.append(new_acc)
-					loss_cache.append(cache[-1])
-					it_cache.append(it_num)
 					print "Training Iteration===>%d, Loss ====>%.4f, Acc ====>%.4f"%(it_num,new_loss,new_acc)
 				it_num +=1
 				
@@ -266,15 +258,7 @@ class NN(object):
 		print "Done Training!"
 		self.save_model()
 		print "Model Saved!"
-		plt.plot(it_cache,loss_cache)
-		plt.xlabel('Iterations')
-		plt.ylabel('Loss')
-		plt.show()
-
-		plt.plot(it_cache,acc_cache)
-		plt.xlabel('Iterations')
-		plt.ylabel('Accuracy')
-		plt.show()
+		
 
 
 	def test(self):
