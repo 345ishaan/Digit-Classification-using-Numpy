@@ -21,7 +21,7 @@ These instructions will showcase how to access the data, train and test the mode
  
 ## Training the model
 1) Python Script , nn.py contains all the APIs used for training the model, saving the model and running over the test data
-2) The script requires three user inputs
+2) The script requires three user inputs<br />
     i)   mode = 'train' or 'test' <br />
     ii)  datapath = path to the data folder inside which the MNIST CSVs files are stored. <br />
     iii) modelpath = path to store the trained weight or load the weights during the test time <br />
@@ -31,6 +31,13 @@ These instructions will showcase how to access the data, train and test the mode
         ```python
             python nn.py train ./data ./model_bn
         ```
+        
+    v) Caution:-
+        
+        If you see the following exception:- 
+                Exception : Not able to parse MNIST Data
+        Please download the mnist_train.csv from the above mentioned link.
+
 ## Testing the model
 1) I have already provided the trained model inside the model folder and the test data inside the data folder.
 2) To get started, use the follwing command.
