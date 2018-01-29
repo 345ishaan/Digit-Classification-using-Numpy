@@ -2,7 +2,6 @@ import sys
 import os
 from nn import *
 import cv2
-from ipdb import set_trace as brk
 
 def run_on_image(img_path,model_path):
 
