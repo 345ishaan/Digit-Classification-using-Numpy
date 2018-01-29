@@ -1,5 +1,8 @@
 # Project Title
 Digit Classification using Two Layer Neural Network and Back Propagation. Written in Python and depends only on Numpy
+                              ![](images/img_0.png)    ![](images/img_4.png)
+
+
 
 ## Getting Started
 These instructions will showcase how to access the data, train and test the model.
