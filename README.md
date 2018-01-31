@@ -153,9 +153,9 @@ These instructions will showcase how to access the data, train and test the mode
 2) Experiments with increasing the hidden layers and size might help us in finding a sweet spot where we are neither underfitting nor overfitting.
 
 
-## Loss and Accuracy Curves without Batch Normalization
+## Loss and Accuracy Curves with Batch Normalization
 ![](figs/with_bn.png)
 
-## Loss and Accuracy Curves with Batch Normalization
+## Loss and Accuracy Curves without Batch Normalization
 ![](figs/without_bn.png)
 
